@@ -1,0 +1,191 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "covid tracker",
+      "intents": [
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "no thank you",
+            "i\u0027m good for now",
+            "i\u0027m good for now thanks",
+            "thanks",
+            "i\u0027m good",
+            "thank you",
+            "end",
+            "quit",
+            "stop"
+          ]
+        },
+        {
+          "name": "CaptureCountryIntent",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "Please enlighten me on {country}",
+            "Please inform me more about {country}",
+            "I would like to know more info about {country}",
+            "I would like to know more information about {country}",
+            "I like {country}",
+            "Let us look at the {country}",
+            "Let me look at the {country}",
+            "Let\u0027s look at the {country}",
+            "Let\u0027s look at {country}",
+            "Let us look at {country}",
+            "Let me look at {country}",
+            "I would like to look at {country}",
+            "I would say {country}",
+            "I would say the {country}",
+            "I would like to know more about {country}",
+            "Let us go with {country}",
+            "Give {country}",
+            "Give me {country}",
+            "Let\u0027s go with {country}",
+            "How is {country} doing",
+            "Tell me more about {country}",
+            "What\u0027s going on in {country}",
+            "{country}",
+            "I would like to know about {country}",
+            "Tell me about the {country}",
+            "What is going on in {country}",
+            "Tell me about {country}",
+            "I want to know about {country}",
+            "I want to know about the {country}"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "US",
+                "synonyms": [
+                  "US",
+                  "USA",
+                  "United States"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Diamond Princess",
+                "synonyms": [
+                  "diamond princess"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Western Sahara",
+                "synonyms": [
+                  "western sahara"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "MS Zaandam",
+                "synonyms": [
+                  "ms zaandam"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Guinea-Bissau",
+                "synonyms": [
+                  "guinea-bissau",
+                  "guinea bissau"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "West Bank and Gaza",
+                "synonyms": [
+                  "west bank and gaza"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Saint Vincent and the Grenadines",
+                "synonyms": [
+                  "saint vincent and the grenadines"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Cote d\u0027Ivoire",
+                "synonyms": [
+                  "cote d\u0027ivoire",
+                  "cote d\u0027Ivoire"
+                ]
+              }
+            }
+          ],
+          "name": "AMAZON.Country"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CaptureCountryIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.309271111440.17413051835"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.309271111440.17413051835",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please try speaking the country you want more information on."
+          }
+        ]
+      }
+    ]
+  },
+  "version": "33"
+}
